@@ -1,0 +1,14 @@
+EffectsModule
+Effects
+Actions de Efects
+ofType
+RXJS
+Observables
+catchError
+map
+swithMap
+of
+Consumo de servicios REST
+Efectos con y sin parámetros
+Teoría de los efectos
+Implementación de efectos

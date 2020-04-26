@@ -1,4 +1,28 @@
-<div class="card-columns">
+<div 
+  class="alert alert-info text-center" 
+  *ngIf="loading">
+  
+  <h4 class="alert-heading">Cargando ... </h4>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABmJLR0QA/wD/AP+gvaeTAAAEC0lEQVRYhe2XT0zbVhzHv04cJ84fNyNQStaSlWhlq+hl2t8DDUJtFWmH0TJCunY7bjeOm0g21ROdV+2yqdplOw4NKFRAT61GtSb00ErrabSisMtoYCs0VMQlNsFO3g5gFEEMRg60mvie4t/v/Z4/8Xvv99UDXnBR5ZikvWvkjMXKNBIlN9p34dRQOebUZBrw/KXkYG0gEOY8HJsRRXk6lbre/UVjazngAMBqpri9a+TM4bq6z1/yelmLhQLLOmx2hz3gP/b+gweJ7olyAFpMFVuY45yHY4tjHrfHabExTaaoit9hpjivKAnxmSgXxzKiKBeU5YQpqiLp7sH2rt9OWWlHWCksXx+InxjRG3f+UnLwUG0gvI/j2IyYkadT07p7sIUf8nrYyp8dLHuUACSXlcaf5eY/HeZPL2wL8JyQ+Np/8GCHr6LCO5+ez8z8+88PPZ0hXm+SCH+zhXEwjUouN3rlwslrpca0tfVb2bdfvv36a/Xv0TQNAFBVFePjE3fkP2YaBwYi+VJ1dKkg63S17q+q9ALA/uqqfZnMQisAXcB+/sQwgGG9PABQDd5IIFD7lgYHADRNIxA49OaEJLViAP2l6gztwQIx346stP0dl9O14YM4XS4bbbe/q1dXElCSpatzs08y+XwBc7NPMpIsXTULWMgrd7PZRWV9PJvNKvnlpTvbAuzpDPF/z0y1/Tl2//up1PSHm+0/w4BjTwemHqXuqaq6FlNVFY+mUvcK9xcG9erKYnVG1cIPed1s1U9Oh+MoKBBJkscXl9KfbXaK9/S/167uwVL64KuRY27WdppQIFlJGb7WdXKsOP/cAHmet0wyoV+qqw+EKyt9PgBIp+fnZ2cf3+iJNX0MUARYdZKzF2+fdbntMQDILuaE3i8be3cacJJp7goGX4lwHGfTYn5/jc/tdrVFheRUXwxxYLUPutz2WH39kYb6+iMNGuhOi3U6movhNHEcx7icbLP2vNKoqZXPueH3Doq20hV6OavVtpajAUBalIXJh3/FAECSZGHn8QA1rz7Vy+XzylqOBoCe+PE+AH27wLUmWVr6XRTFNziOY4rjoiguy4tLN7Xn59hmCPWRkOiurj4QrvRppzidfjw7d6M3HvpEO8UvTh8kINmljX1wT2a160u8lbWt164BGrW29drkTkKoqJDoiAqJDoCY/iMr1haM+P01PoZhwDAM/P4aXzAYbIsKyYt6dSVvdQDQ/k2i49W6uu8KFEWiwi30xXDZDKBRa1uvTW91BYoiFAgoQkzbn1Fr21Cnl7gSb7ocFW4RihDSG2/+0SygUWszDAhQxOyyFsuotW2gKBfA1jJmbTsCeO7b0SRA8GtnKLTV2O1a2yZLvB0RUIChg7QKtOe3e9L0H2BasdJ9yk7NAAAAAElFTkSuQmCC"/>
+  <p class="mb-0"></p>
+
+</div>
+
+<div 
+  class="alert alert-danger text-center" 
+  *ngIf="error">
+  
+  <h4 class="alert-heading">Cargando ... </h4>
+  <p>
+    {{error.message}}
+  </p>
+  <p class="mb-0"></p>
+  
+</div>
+
+<div 
+    class="card-columns"  
+    *ngIf="!loading">
     
     <div class="card" *ngFor="let user of userslist">
       <img [src]="user.avatar" class="card-img-top" alt="...">
